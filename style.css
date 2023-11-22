@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+body {
+  background-color: #fcf5ed;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 3%;
+  background-color: #2b3499;
+  z-index: 999;
+  height: 10vh;
+}
+.navbar-container > .logo {
+  display: flex;
+  align-items: center;
+}
+.navbar-container > .logo i {
+  font-size: 3em;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+}
+.navbar-container > .logo h1 {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+main {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+.input_section > h2 {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.input_section > form > .input {
+  margin: 8px 0;
+}
+
+.input_section > form > button {
+  background-color: cornflowerblue;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.input_section > form > button > span {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.input_section > form > .input > label {
+  color: cornflowerblue;
+  font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  color: cornflowerblue;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search_section {
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border: none;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
+  border-radius: 10px;
+}
+
+.search_section > h2 {
+  color: cornflowerblue;
+}
+
+.search_section > form {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search_section > form > input {
+  width: 85%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search_section > form > button {
+  width: 7%;
+  height: 2em;
+  padding: 10px;
+  background-color: cornflowerblue;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  transition: background-color 0.3s;
+}
+
+.search_section > form > button:hover {
+  background-color: #0056b3;
+}
+
+.book_shelf {
+  margin: 16px 0 0 0;
+  background-color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+.book_shelf > h2 {
+  color: cornflowerblue;
+}
+
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05);
+  background-color: #ebebeb;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+  border: 0;
+  padding: 5px;
+  margin: 10px 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 2.5em;
+  height: 2.5em;
+}
+.book_shelf > .book_list > .book_item > .bookInfo {
+  display: flex;
+  flex-direction: column;
+}
+.book_shelf > .book_list > .book_item > .bookInfo .bookParagrafInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+  background-color: darkgreen;
+  color: white;
+  transition: background-color 0.2s font-size 0.3s ease;
+}
+.book_shelf > .book_list > .book_item > .action > .green:hover{
+  background-color: green;
+  font-size: 15px;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+  background-color: darkred;
+  color: white;
+  transition: background-color 0.2s font-size 0.3s ease;
+}
+.book_shelf > .book_list > .book_item > .action > .red:hover{
+  background-color: red;
+  font-size: 15px;
+}
+
+.book_shelf > #searchedBook > .book_item > .action {
+  display: none;
+}
+
+.modal {
+  padding: 1em;
+  max-width: 50ch;
+  border: 0;
+  box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+.modal > .modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal > .modal-header i {
+  padding-top: 10px;
+  color: darkred;
+  padding-left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: font-size 0.3s, color 0.3s;
+}
+.modal > .modal-header i:hover {
+  font-size: 22px;
+  color: #ff0000;
+}
+
+.modal > .modal-body > #trashIcon {
+  display: flex;
+  justify-content: center;
+  font-size: 5em;
+  color: darkred;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.modal > .modal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: auto;
+}
+.modal > .modal-footer > #delete {
+  color: white;
+  background-color: darkred;
+  font-weight: bold;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.5em 2em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.modal > .modal-footer > #delete_back {
+  color: white;
+  font-weight: bold;
+  background-color: darkblue;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.5em 2em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.modal > .modal-footer > #delete:hover {
+  background-color: red;
+  transform: scale(1.1);
+}
+.modal > .modal-footer > #delete_back:hover {
+  background-color: blue;
+  transform: scale(1.1);
+}
+
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}

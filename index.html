@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf Apps</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <header class="navbar-container">
+    <div class="logo">
+      <i class="fa-solid fa-book-open-reader"></i>
+      <h1>Bookshelf App</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="input_section">
+      <h2>Masukkan Buku Baru</h2>
+      <form id="inputBook">
+        <div class="input">
+          <label for="inputBookTitle">Judul</label>
+          <input id="inputBookTitle" type="text" required placeholder="Masukan Judul Buku">
+        </div>
+        <div class="input">
+          <label for="inputBookAuthor">Penulis</label>
+          <input id="inputBookAuthor" type="text" required placeholder="Masukan Nama Penulis Buku">
+        </div>
+        <div class="input">
+          <label for="inputBookYear">Tahun</label>
+          <input id="inputBookYear" type="number" required placeholder="Masukan Tahun Terbit Buku">
+        </div>
+        <div class="input_inline">
+          <label for="inputBookIsComplete">Selesai dibaca</label>
+          <input id="inputBookIsComplete" type="checkbox">
+        </div>
+        <button id="bookSubmit" type="submit">Masukkan Buku ke rak <span>Belum selesai dibaca</span></button>
+      </form>
+    </section>
+
+    <section class="search_section">
+      <h2>Cari Buku</h2>
+      <form id="searchBook">
+        <input id="searchBookTitle" type="text" placeholder="Judul, author">
+        <button id="searchSubmit" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </section>
+
+    <section class="book_shelf">
+      <h2>Hasil Pencarian</h2>
+      <div id="searchedBook">
+      </div>
+    </section>
+
+
+
+    <section class="book_shelf">
+      <h2>Belum selesai dibaca</h2>
+
+      <div id="incompleteBookshelfList" class="book_list">
+      </div>
+    </section>
+
+    <section class="book_shelf">
+      <h2>Selesai dibaca</h2>
+
+      <div id="completeBookshelfList" class="book_list">
+      </div>
+
+    </section>
+
+    <dialog class="modal delete" id="delete_modal">
+      <div class="modal-header">
+        <h2>Menghapus Buku</h2>
+        <i class="fa-solid fa-x" id="close_delete_modal"></i>
+      </div>
+      <div class="modal-body">
+        <i class="fa-solid fa-trash-can" id="trashIcon"></i>
+        <p>Apakah Anda Yakin Ingin Menghapus buku Ini ?</p>
+      </div>
+      <div class="modal-footer">
+        <button id="delete">Hapus</button>
+        <button id="delete_back">Kembali</button>
+      </div>
+    </dialog>
+
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
